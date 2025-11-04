@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema Bancário TADS044</title>
+</head>
+
+
+<body>
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1min.js"></script>
+
+    <div class="container center">
+		<h2> .:: Sistema Bancário TADS044 ::.  </h2>
+		<a href="/" class="waves-effect waves-light btn"><i class="material-icons left">home</i> Home</a>
+		<a href="/cadastrarCliente" class="waves-effect waves-light btn"><i class="material-icons left">add_circle_outline</i>Cadastrar Clinte</a>
+		<a href="/listarClientes" class="waves-effect waves-light btn"><i class="material-icons left">list</i> Listar Clientes</a>
+	</div>	
+
+    <form method="post" class="container">
+        <div class="row">
+            <div class="input-field col s12">
+                Nome: <input type="text" value="" name="nome" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6">
+                CPF: <input type="text" value="" name="cpf" />
+            </div>
+            <div class="input-field col s3">
+                Data de Nascimento: <input type="date" value="" name="dataNasc" />
+            </div>
+            <div class="input-field col s3">
+                RG: <input type="number" value="" name="rg" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6">
+                Email: <input type="email" value="" name="email" />
+            </div>
+            <div class="input-field col s6">
+                Telefone: <input type="tel" value="" name="telefone" />
+            </div>
+        </div>
+        <div class="row center">
+            <button class="waves-effect waves-light btn" type="submit">
+                <i class="material-icons left">save</i>Salvar
+            </button>
+            <button class="waves-effect waves-light btn" type="reset">
+                <i class="material-icons left">cancel</i>Cancelar
+            </button>
+            <a class="waves-effect waves-light btn" href="/">
+                <i class="material-icons left">keyboard_arrow_left</i>Voltar
+            </a>
+        </div>
+    </form>
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1min.js"></script>
+
+
+</body>
+
+</html>
