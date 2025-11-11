@@ -7,30 +7,37 @@ import jakarta.persistence.Id;
 @Entity
 public class Cliente {
 	@Id
-	@Column(nullable = false, length = 14, name = "cpf")
-	private String cpf;
-	@Column(nullable = false, length = 100, name = "nome")
-	private String nome;
-	@Column(nullable = false, columnDefinition = "date", name = "dataNasc")
-	private String dataNasc;
-	@Column(nullable = false, columnDefinition = "int", name = "rg")
-	private Integer rg;
-	@Column(nullable = false, length = 45, unique = true, name = "email")
-	private String email;
-	@Column(nullable = false, length = 25, unique = true, name = "telefone")
-	private String telefone;
-	// private Endereco endereco;
+    @Column(nullable = false, length = 14, name = "cpf")
+    private String cpf;
 
-	public Cliente(String nome, String cpf, String dataNasc, Integer rg, String email, String telefone) {
-		super();
-		this.nome = nome;
-		this.cpf = cpf;
-		this.dataNasc = dataNasc;
-		this.rg = rg;
-		this.email = email;
-		this.telefone = telefone;
-		// this.endereco = endereco;
-	}
+    @Column(nullable = false, length = 100, name = "nome")
+    private String nome;
+
+    @Column(nullable = false, columnDefinition = "date", name = "dataNasc")
+    private String dataNasc;
+
+    @Column(nullable = false, columnDefinition = "int", name = "rg")
+    private Integer rg;
+
+    @Column(nullable = false, length = 45, unique = true, name = "email")
+    private String email;
+
+    @Column(nullable = false, length = 25, unique = true, name = "telefone")
+    private String telefone;
+
+    // Construtor padrão exigido pelo JPA
+    public Cliente() {
+    }
+
+    // Construtor completo (mantém o seu original)
+    public Cliente(String nome, String cpf, String dataNasc, Integer rg, String email, String telefone) {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.dataNasc = dataNasc;
+        this.rg = rg;
+        this.email = email;
+        this.telefone = telefone;
+    }
 	
 	public String getNome() {
 		return nome;
