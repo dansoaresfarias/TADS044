@@ -83,6 +83,18 @@ public class Cliente {
 		return rg;
 	}
 
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+
+	public void setDataNasc(String dataNasc) {
+		this.dataNasc = dataNasc;
+	}
+
+	public void setRg(Integer rg) {
+		this.rg = rg;
+	}
+
 	@Override
 	public String toString() {
 		return "Cliente, " + nome + ", CPF: " + cpf + ", nacido em " + dataNasc + ", portador do RG: " + rg + ", e-mail: " + email + ", telefone: "
